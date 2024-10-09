@@ -11,3 +11,9 @@ ON
 
 OFF
 ![image](https://github.com/user-attachments/assets/252c216c-2012-4d65-a322-2a3f533967fb)
+
+-----------------------------------------------------------------------------------------------------------------------------
+For online theme:
+```CSS
+https://raw.githubusercontent.com/JustTharpy/Discord-Compact-Larger-Emotes/refs/heads/main/Larger%20Compact%20Emotes.css
+```

@@ -1,0 +1,10 @@
+/*Compact Emojis Are Larger*/
+[class^="message"] [class*="compact"] [class="emoji"] ,
+[class*="compact"] [class^="emoji jumboable"] {
+  font-size: 34px;
+  transform: translate(0px, 12px);
+  bottom: 12px
+}
+[class^="message"] [class*="compact"] [class*="reaction"] [class^="emoji"] {			/*Returns react bar to normal location*/
+  transform: translate(0px, 0px)
+}

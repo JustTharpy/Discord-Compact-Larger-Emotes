@@ -1,3 +1,9 @@
+/**
+* @name Larger Compact Emotes
+* @author Tharpadarp
+* @version 1.0
+* @description Makes compact discord emotes the size of cozy emotes
+*/
 /*Compact Emojis Are Larger*/
 [class^="message"] [class*="compact"] [class="emoji"] ,
 [class*="compact"] [class^="emoji jumboable"] {

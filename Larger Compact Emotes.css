@@ -1,23 +1,24 @@
 /**
 * @name Larger Compact Emotes
 * @author Tharpadarp
-* @version 1.1
+* @version 1.2
 * @description Makes compact discord emotes the size of cozy emotes
 */
 /*Compact Emotes Are Larger*/
-[class^="message"] [class*="compact"] [class="emoji"] ,
-[class*="compact"] [class^="emoji jumboable"] {
+.contents_f9f2ca [class="emoji"] ,
+[class="emoji jumboable"] {
   font-size: 34px;                              /*This is what makes emotes larger*/
   transform: translate(0px, 12px);                              /*Moves emotes to be in line*/
   bottom: 12px                              /*Makes messages with emotes larger*/
 }
-[class^="message"] [class*="compact"] [class*="reaction"] [class^="emoji"] {      /*Move react emotes back to where they should be*/
-  transform: translate(0px, 0px)
-}
 
-[class^="threadMessageAccessory"] [class="emoji"] {     /*Thread containers no longer have oversized emotes*/
+.threadMessageAccessory_f9f2ca [class="emoji"] {     /*Thread containers no longer have oversized emotes*/
   font-size: 16px !important;
 }
-[class^="repliedMessage"]:has(+ [class^="contents"] [class*="emoji"]) [class="repliedMessageClickableSpine_f9f2ca"]  {      /*Make replied messages with emotes have a longer line*/
+.contents_f9f2ca::before {      /*Hide weird extension of Thread*/
+  display: none;
+}
+
+[class="repliedMessage_f9f2ca latin24CompactTimeStamp_f9f2ca"]:has(+ .contents_f9f2ca [class="emoji"] , + .contents_f9f2ca [class="emoji jumboable"]) .repliedMessageClickableSpine_f9f2ca  {      /*Make replied messages with emotes have a longer line*/
   height: 34px !important;
 }

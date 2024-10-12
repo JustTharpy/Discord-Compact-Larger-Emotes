@@ -1,16 +1,23 @@
 /**
 * @name Larger Compact Emotes
 * @author Tharpadarp
-* @version 1.0
+* @version 1.1
 * @description Makes compact discord emotes the size of cozy emotes
 */
-/*Compact Emojis Are Larger*/
+/*Compact Emotes Are Larger*/
 [class^="message"] [class*="compact"] [class="emoji"] ,
 [class*="compact"] [class^="emoji jumboable"] {
-  font-size: 34px;
-  transform: translate(0px, 12px);
-  bottom: 12px
+  font-size: 34px;                              /*This is what makes emotes larger*/
+  transform: translate(0px, 12px);                              /*Moves emotes to be in line*/
+  bottom: 12px                              /*Makes messages with emotes larger*/
 }
-[class^="message"] [class*="compact"] [class*="reaction"] [class^="emoji"] {			/*Returns react bar to normal location*/
+[class^="message"] [class*="compact"] [class*="reaction"] [class^="emoji"] {      /*Move react emotes back to where they should be*/
   transform: translate(0px, 0px)
+}
+
+[class^="threadMessageAccessory"] [class="emoji"] {     /*Thread containers no longer have oversized emotes*/
+  font-size: 16px !important;
+}
+[class^="repliedMessage"]:has(+ [class^="contents"] [class*="emoji"]) [class="repliedMessageClickableSpine_f9f2ca"]  {      /*Make replied messages with emotes have a longer line*/
+  height: 34px !important;
 }
